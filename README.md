@@ -5,4 +5,4 @@ Projet du mois d'Octobre obtenu à NaN conçu en HTML/CSS/JS puis le backend en 
 
 https://moh7ven.github.io/AfricaLibAudio/
 
-![Logo](./img/logo.png)
+![Logo](./assets/img/logo.png)
