@@ -419,6 +419,261 @@ div.card-bas .prix {
   margin-top: 2%;
   border-radius: 30px;
   box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.25);
+  padding: 2%;
+  font-size: 23px;
+  color: rgba(57, 57, 57, 1);
+  text-align: center;
+}
+
+.about-card p {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 0.5%;
+}
+
+/* NOUS CONTACTER */
+
+.nous-contacter {
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 80%;
+}
+
+.nous-contacter-title {
+  font-size: 40px;
+  color: rgba(57, 57, 57, 1);
+}
+
+.nous-contacter-card {
+  width: 100%;
+  height: 518px;
+  /* margin: 0 auto; */
+
+  background-color: rgba(81, 176, 7, 1);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.25);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 25%; */
+  width: 100%;
+  gap: 1px;
+}
+
+.nom-container,
+.prenom-container,
+.email-container,
+.message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  /* margin-left: 30%; */
+}
+
+form input {
+  height: 50px;
+}
+
+form label {
+  margin-left: 15%;
+  font-size: 17px;
+  color: white;
+}
+
+form input,
+textarea {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid;
+  border-radius: 4px;
+  box-shadow: rgba(9, 30, 66, 0.31) 0px 0px 1px 0px,
+    rgba(9, 30, 66, 0.25) 0px 1px 1px 0px;
+}
+
+.envoyer {
+  width: 143px;
+  height: 45.62px;
+  background-color: rgb(66, 111, 32);
+  border: 2px solid rgb(255, 255, 255);
+  font-size: 16px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+  margin-top: 0.5%;
+  color: white;
+  /* background-color: ; */
+}
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+  height: px;
+  background-color: rgba(57, 57, 57, 1);
+  /* display: flex; */
+  margin-top: 10%;
+}
+
+footer div.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3px;
+  margin-top: -5%;
+  width: 100%;
+  height: 200px;
+}
+
+footer div.site-descrip {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: flex-start;
+}
+
+footer div.site-descrip p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 1);
+  width: 334px;
+}
+
+.bloc-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: auto;
+}
+
+.bloc-info1 {
+  display: flex;
+}
+
+.bloc-info1 .rond1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  border-radius: 90%;
+  background-color: rgba(81, 176, 7, 1);
+}
+
+.bloc-info1 .info-text1 {
+  color: rgba(255, 255, 255, 1);
+  font-weight: lighter;
+}
+
+.bloc-info2 {
+  display: flex;
+  margin-top: 5%;
+}
+
+.bloc-info2 .rond2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  border-radius: 90%;
+  background-color: rgba(81, 176, 7, 1);
+}
+
+.bloc-info2 .info-text2 {
+  color: rgba(255, 255, 255, 1);
+  font-weight: lighter;
+}
+
+.bloc-ins .conn {
+  margin-top: 15%;
+}
+
+.bloc-copy {
+  margin-top: 4%;
+}
+
+.our-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.our-social p.social-title {
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  /* margin-top: -30%; */
+}
+
+.our-social div.social-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.our-social div.social-content div {
+  height: 37px;
+  width: 35px;
+  background-color: rgba(81, 176, 7, 1);
+  border-radius: 3px;
+  /* gap: 5px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.liens {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.liens p {
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  margin-top: -20%;
+}
+
+.liens div.liens-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.liens div.liens-container a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  font-size: 13px;
+}
+
+.trait-foot {
+  margin: 0 auto;
+  height: 2px;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.44);
+}
+
+.copyright {
+  color: white;
+  margin: 0 auto;
+}
+
+.copyright p {
+  text-align: center;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 768px) {

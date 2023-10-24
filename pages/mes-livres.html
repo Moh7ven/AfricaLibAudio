@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mes livres-AfricaLibAudio</title>
+    <link rel="stylesheet" href="../assets/css/mes-livres.css" />
+    <link rel="shortcut icon" href="../assets/img/logo.png" />
+    <link rel="stylesheet" href="../assets/css/popup-supprimer.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="logo">
+        <img src="../assets/img/logo2.png" alt="" />
+      </div>
+
+      <ul class="nav-links">
+        <div class="nav-links-li">
+          <li>
+            <a href="./acceuil.html">Acceuil</a>
+          </li>
+          <li>
+            <a href="./mes-livres.html" style="color: white"
+              ><u>Mes livres</u></a
+            >
+          </li>
+        </div>
+
+        <!-- POPUP ALERT SUPPRIMER LIVRE-->
+        <div id="popup-supprimer" class="overlay">
+          <div class="overlay-content">
+            <a class="close" href="#">&times;</a>
+            <div class="popup">
+              <div class="content-popup">
+                <section class="principal">
+                  <div class="container-pop">
+                    <form action="./acceuil.html">
+                      <div class="titre-form-supprimer">
+                        <img src="../assets/img/alerte.png" alt="logo-alert" />
+                      </div>
+                      <div class="element">
+                        <div class="style-msg-alert">
+                          <span class="desc"
+                            >ATTENTION!! Voulez-vous vraimment supprimer ce
+                            livre ?</span
+                          >
+                        </div>
+                        <div class="yesOrNo">
+                          <div class="no" id="no">
+                            <a href="./mes-livres.html">Non</a>
+                          </div>
+                          <div class="sup" id="supprimer">
+                            <a href="./mes-livres.html">Oui</a>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END POPUP ALERT SUPPRIMER LIVRE -->
+
+        <div class="search-container">
+          <form class="search">
+            <input type="text" />
+            <button>
+              <img
+                src="../assets/img/loupe.png"
+                alt=""
+                width="20px"
+                height="20px"
+              />
+            </button>
+          </form>
+        </div>
+
+        <div class="authen">
+          <div class="identif">
+            <span>Mohamed SANGARE</span>
+          </div>
+          <div class="logo-user">
+            <a href="./profil.html"
+              ><img
+                src="../assets/img/humain.png"
+                alt=""
+                height="33px"
+                width="33px"
+            /></a>
+          </div>
+        </div>
+      </ul>
+    </nav>
+
+    <section class="livres-container">
+      <div class="livre">
+        <div class="supp-bloc"><a href="#popup-supprimer">Supprimer</a></div>
+        <div class="image-livre">
+          <img
+            src="../assets/img/histoire-general-afrique.png"
+            alt=""
+            height="300px"
+            width="200px"
+          />
+        </div>
+        <div class="audio-and-des">
+          <audio controls><source src="../assets/BoyFifty-snake.mp3" /></audio>
+          <div class="description">
+            <p class="auteur">
+              <u>Auteur:</u> <span style="color: black">Mohamed sangare</span>
+            </p>
+            <p class="titre">
+              <u>Titre:</u>
+              <span style="color: black"> Afrique, mon afrique</span>
+            </p>
+            <p class="des-title"><u>Descriptions</u></p>
+            <p class="des-text">
+              djfshfshfghjsdsdjhgdshjsghjdsfgsfgdshfdf fdfdsgf fdfgdshjfg
+              ddgfjfdvfjdfvjhfsdhsgfshfvdhfdff fdffjg fdgf ffgzdfhzg
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section role="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="site-descrip">
+            <img
+              src="../assets/img/logo.png"
+              alt=""
+              width="113px"
+              height="68px"
+            />
+            <p>
+              AfricaLibAudio, votre passerelle vers un monde de découverte,
+              d'aventure et d'apprentissage à travers les livres audio pour tout
+              age et pour enfants centrés sur l'Afrique.
+            </p>
+          </div>
+          <div class="bloc-info">
+            <div class="bloc-info1">
+              <div class="rond1">
+                <img
+                  src="../assets/img/courrier.png"
+                  alt=""
+                  height="30px"
+                  width="30px"
+                />
+              </div>
+              <div class="info-text1">
+                <p>Email:</p>
+                <p>Mohamedsangare0107@gmail.com</p>
+              </div>
+            </div>
+            <div class="bloc-info2">
+              <div class="rond2">
+                <img
+                  src="../assets/img/localisateur.png"
+                  alt=""
+                  height="30px"
+                  width="30px"
+                />
+              </div>
+              <div class="info-text2">
+                <p>Adresse:</p>
+                <p>Abidjan, Côte dIvoire</p>
+              </div>
+            </div>
+          </div>
+          <div class="our-social">
+            <p class="social-title">NOS RESEAUX</p>
+            <div class="social-content">
+              <div class="github">
+                <img
+                  src="../assets/img/github.png"
+                  alt=""
+                  height="30px"
+                  width="30px"
+                />
+              </div>
+              <div class="twitter">
+                <img
+                  src="../assets/img/twitter.png"
+                  alt=""
+                  height="30px"
+                  width="30px"
+                />
+              </div>
+              <div class="insta">
+                <img
+                  src="../assets/img/instagram.png"
+                  alt=""
+                  height="30px"
+                  width="30px"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="liens">
+            <p>Liens</p>
+            <div class="liens-container">
+              <a href="">Nos produits</a>
+              <a href="">A propros</a>
+              <a href="">Nous contacter</a>
+            </div>
+          </div>
+        </div>
+        <div class="bloc-copy">
+          <div class="trait-foot"></div>
+          <div class="copyright">
+            <p>Tous droits réservés © 2023 Mohamed SANGARE</p>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>
