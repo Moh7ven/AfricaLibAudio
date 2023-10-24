@@ -41,7 +41,7 @@ body {
 .navbar ul.nav-links .nav-links-li {
   display: flex;
   justify-content: space-around;
-  width: 30%;
+  width: 40%;
 }
 
 .navbar ul.nav-links li a {
@@ -119,146 +119,141 @@ body {
   color: white;
 }
 
-/* NOS PRODUITS */
-
-.nos-produits {
-  margin: 0 auto;
-  margin-top: 7%;
-}
-
-.nos-produits div.onglets-produits {
-  height: 60px;
-  width: 50%;
-  background-color: rgba(185, 237, 144, 1);
+.btn-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  border-radius: 10px;
+  width: 100%;
+  margin-top: 7%;
 }
 
-div.onglets-produits .onglets-produits-content {
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-div.onglets-produits div.onglets-produits-content .tous {
-  width: 112px;
-  height: 52px;
+.btn-container .btn {
+  height: 50px;
+  width: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(81, 176, 7, 1);
-  border-radius: 69px;
+  border-radius: 5px;
 }
 
-div.onglets-produits-content .tous a {
-  color: white;
+.btn-container .btn a {
   text-decoration: none;
+  color: white;
 }
 
-.nos-produits div.descripts {
-  width: 80%;
+/* LIVRES CONTAINER */
+
+.livres-container {
   margin: 0 auto;
-  margin-top: 7%;
-}
-
-.descripts p.title-descripts {
-  color: rgba(81, 176, 7, 1);
-  font-size: 24px;
-}
-
-.descripts p.title-descripts2 {
-  color: rgba(57, 57, 57, 1);
-  font-size: 40px;
-}
-
-div.card-livre-container {
-  width: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  margin: 0 auto;
-  margin-top: 7%;
   gap: 20px;
+  margin-top: 7%;
+  width: 100%;
 }
 
-div.card-livre {
+.livres-container div.livre {
   position: relative;
-  width: 240px;
-  height: 334px;
-  border-radius: 10px;
+  height: 350px;
+  width: 42rem;
   background-color: rgba(217, 228, 235, 1);
   box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
 }
 
-div.card-livre .card-haut {
-  margin-left: 20%;
-  margin-top: 10%;
-}
-
-div.card-livre .card-bas {
+.livres-container div.livre .supp-bloc {
   position: absolute;
-  width: 100%;
-  height: 81px;
-  bottom: 0;
-  /* left: 0; */
-  background-color: rgba(244, 245, 248, 1);
-  border-radius: 0 0 10px 10px;
+  top: 0;
+  right: 0;
+  height: 40px;
+  width: 100px;
+  background-color: orangered;
+  border-radius: 0 10px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-div.card-livre .type-content {
+.livres-container div.livre .supp-bloc a {
+  color: white;
+  text-decoration: none;
+}
+
+.livres-container div.livre .modif-bloc {
   position: absolute;
-  margin-top: 10%;
-  margin-left: 5px;
-  font-size: 14px;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 100px;
+  background-color: rgba(81, 176, 7, 1);
+  border-radius: 10px 0 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.livres-container div.livre .modif-bloc a {
+  color: white;
+  text-decoration: none;
+}
+
+.image-livre {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  margin-top: 6%;
+}
+
+.audio-and-des {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  gap: 40px;
+}
+
+.audio-and-des .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.audio-and-des .description .des-title {
+  font-size: 20px;
   color: rgba(81, 176, 7, 1);
 }
 
-div.card-livre div.type-content .type {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 30px;
+.audio-and-des .description .auteur {
   font-size: 18px;
+  color: rgba(81, 176, 7, 1);
+}
+
+.audio-and-des .description .titre {
+  font-size: 18px;
+  color: rgba(81, 176, 7, 1);
+}
+
+.audio-and-des .description .des-text {
+  text-align: center;
+  color: rgba(57, 57, 57, 1);
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button {
+  background-color: rgba(185, 237, 144, 1);
+  color: #fff;
+  border-radius: 10px;
+}
+
+/* Personnalisez la couleur des contrôles */
+audio::-webkit-media-controls-panel {
   background-color: rgba(81, 176, 7, 1);
-  color: white;
-}
-
-div.card-bas .panier-logo {
-  position: absolute;
-  height: 45px;
-  width: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(81, 176, 7, 1);
-  border-radius: 90px;
-  right: 0;
-  bottom: 0;
-}
-
-div.card-bas .panier-logo a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-div.card-bas .titre {
-  position: absolute;
-  top: 0;
-  margin-left: 5px;
-  font-size: 14px;
-}
-
-div.card-bas .prix {
-  position: absolute;
-  bottom: 0;
-  margin-left: 5px;
 }
 
 /* FOOTER */

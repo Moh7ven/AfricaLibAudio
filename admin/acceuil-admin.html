@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acceuil-AfricaLibAudio</title>
-    <link rel="stylesheet" href="../assets/css/acceuil.css" />
-    <link rel="stylesheet" href="../assets/css/popup-achat.css" />
+    <title>Acceuil-admin-AfricaLibAudio</title>
+    <link rel="stylesheet" href="./assets/css/acceuil-admin.css" />
+    <link rel="stylesheet" href="./assets/css/popover.css" />
     <link rel="shortcut icon" href="../assets/img/logo.png" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
@@ -27,9 +27,12 @@
       <ul class="nav-links">
         <div class="nav-links-li">
           <li>
-            <a href="./acceuil.html" style="color: white"><u>Acceuil</u></a>
+            <a href="./acceuil-admin.html" style="color: white"
+              ><u>Acceuil</u></a
+            >
           </li>
-          <li><a href="./mes-livres.html">Mes Livres</a></li>
+          <li><a href="./gestion-livre.html">Gestion de livres</a></li>
+          <li><a href="./liste-user.html">liste des utilisateurs</a></li>
         </div>
 
         <div class="search-container">
@@ -48,80 +51,24 @@
 
         <div class="authen">
           <div class="identif">
-            <span>Mohamed SANGARE</span>
+            <span>Administrateur</span>
           </div>
           <div class="logo-user">
-            <a href="./profil.html"
-              ><img
-                src="../assets/img/humain.png"
-                alt=""
-                height="33px"
-                width="33px"
-            /></a>
+            <img
+              src="../assets/img/humain.png"
+              alt=""
+              height="33px"
+              width="33px"
+            />
+            <div class="popover__content">
+              <p class="popover__message"><a href="./profil.html">Profil</a></p>
+              <hr />
+              <p class="popover__message deco">Deconnexion</p>
+            </div>
           </div>
         </div>
       </ul>
     </nav>
-
-    <!-- POPUP ALERT ACHETER LIVRE -->
-    <div id="popup-achat" class="overlay">
-      <div class="overlay-content">
-        <a class="close" href="#">&times;</a>
-        <div class="popup">
-          <div class="content-popup">
-            <section class="principal">
-              <div class="container-pop">
-                <div class="achat-title">
-                  <p>Achat de livre</p>
-                </div>
-                <form>
-                  <div class="image-livre">
-                    <img
-                      src="../assets/img/histoire-general-afrique.png"
-                      alt=""
-                      height="300px"
-                      width="200px"
-                    />
-                  </div>
-                  <div class="info-achat">
-                    <p class="paye-title">
-                      Veuillez choisir le moyen de payement
-                    </p>
-                    <select name="operateur" id="">
-                      <option value="mtn money" selected>mtn money</option>
-                      <option value="moov money">moov money</option>
-                      <option value="orange money">orange money</option>
-                      <option value="wave">wave</option>
-                    </select>
-                    <input
-                      type="number"
-                      name="phone"
-                      placeholder="Veuillez entrer votre numéro de téléphone"
-                      class="phone"
-                    />
-                    <p class="prix-pop"><u>Prix:</u> <span>15000</span> fcfa</p>
-                    <button>Acheter</button>
-                  </div>
-                </form>
-                <div class="des-pop-container">
-                  <p class="des-pop-title"><u>Titre:</u> <span>Africa</span></p>
-                  <p class="des-pop-title">
-                    <u>Auteur:</u> <span>Mohamed Sangare</span>
-                  </p>
-                  <p class="des-pop-title"><u>Description</u></p>
-                  <p class="des-pop">
-                    ehedgjsvddddsvdsjhvf fnkjfb f fbfsbf fkbhshj fjhv
-                    ehedgjsvddddsvdsjhvf fnkjfb f fbfsbf fkbhshj
-                    fjhvehedgjsvddddsvdsjhvf fnkjfb f fbfsbf fkbhshj fjhv
-                  </p>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- END POPUP ALERT ACHETER LIVRE -->
 
     <section class="nos-produits" id="nos-produits">
       <div class="onglets-produits">
@@ -155,16 +102,6 @@
               ><u>Catégorie:</u> <span class="type">Enfants</span></span
             >
             <span class="prix">15000 <span>fcfa</span></span>
-            <div class="panier-logo">
-              <a href="#popup-achat">
-                <img
-                  src="../assets/img/panier.png"
-                  alt="logo-panier"
-                  width="23px"
-                  height="23px"
-                />
-              </a>
-            </div>
           </div>
         </div>
 
@@ -183,14 +120,6 @@
               ><u>Catégorie:</u> <span class="type">Enfants</span></span
             >
             <span class="prix">15000 <span>fcfa</span></span>
-            <div class="panier-logo">
-              <img
-                src="../assets/img/panier.png"
-                alt="logo-panier"
-                width="23px"
-                height="23px"
-              />
-            </div>
           </div>
         </div>
 
@@ -209,14 +138,6 @@
               ><u>Catégorie:</u> <span class="type">Enfants</span></span
             >
             <span class="prix">15000 <span>fcfa</span></span>
-            <div class="panier-logo">
-              <img
-                src="../assets/img/panier.png"
-                alt="logo-panier"
-                width="23px"
-                height="23px"
-              />
-            </div>
           </div>
         </div>
 
@@ -235,14 +156,6 @@
               ><u>Catégorie:</u> <span class="type">Enfants</span></span
             >
             <span class="prix">15000 <span>fcfa</span></span>
-            <div class="panier-logo">
-              <img
-                src="../assets/img/panier.png"
-                alt="logo-panier"
-                width="23px"
-                height="23px"
-              />
-            </div>
           </div>
         </div>
 
@@ -261,14 +174,6 @@
               ><u>Catégorie:</u> <span class="type">Enfants</span></span
             >
             <span class="prix">15000 <span>fcfa</span></span>
-            <div class="panier-logo">
-              <img
-                src="../assets/img/panier.png"
-                alt="logo-panier"
-                width="23px"
-                height="23px"
-              />
-            </div>
           </div>
         </div>
 
@@ -287,14 +192,6 @@
               ><u>Catégorie:</u> <span class="type">Enfants</span></span
             >
             <span class="prix">15000 <span>fcfa</span></span>
-            <div class="panier-logo">
-              <img
-                src="../assets/img/panier.png"
-                alt="logo-panier"
-                width="23px"
-                height="23px"
-              />
-            </div>
           </div>
         </div>
 
@@ -313,14 +210,6 @@
               ><u>Catégorie:</u> <span class="type">Enfants</span></span
             >
             <span class="prix">15000 <span>fcfa</span></span>
-            <div class="panier-logo">
-              <img
-                src="../assets/img/panier.png"
-                alt="logo-panier"
-                width="23px"
-                height="23px"
-              />
-            </div>
           </div>
         </div>
 
@@ -339,14 +228,6 @@
               ><u>Catégorie:</u> <span class="type">Enfants</span></span
             >
             <span class="prix">15000 <span>fcfa</span></span>
-            <div class="panier-logo">
-              <img
-                src="../assets/img/panier.png"
-                alt="logo-panier"
-                width="23px"
-                height="23px"
-              />
-            </div>
           </div>
         </div>
       </div>

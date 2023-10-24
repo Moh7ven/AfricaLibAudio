@@ -41,7 +41,7 @@ body {
 .navbar ul.nav-links .nav-links-li {
   display: flex;
   justify-content: space-around;
-  width: 30%;
+  width: 40%;
 }
 
 .navbar ul.nav-links li a {
