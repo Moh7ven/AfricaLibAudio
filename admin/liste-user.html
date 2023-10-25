@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/liste-user.css" />
     <link rel="shortcut icon" href="../assets/img/logo.png" />
+    <link rel="stylesheet" href="./assets/css/popover.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
@@ -51,19 +52,25 @@
 
         <div class="authen">
           <div class="identif">
-            <span>Administrateur</span>
+            <span id="infoUser">Administration</span>
           </div>
           <div class="logo-user">
-            <a href="./profil.html"
-              ><img
-                src="../assets/img/humain.png"
-                alt=""
-                height="33px"
-                width="33px"
-            /></a>
+            <img
+              src="../assets/img/humain.png"
+              alt=""
+              height="33px"
+              width="33px"
+            />
+            <div class="popover__content">
+              <p class="popover__message"><a href="./profil.html">Profil</a></p>
+              <hr />
+              <p class="popover__message deco" id="deco">Deconnexion</p>
+            </div>
           </div>
         </div>
       </ul>
     </nav>
+    <script src="./assets/js/liste-user.js"></script>
+    <script src="../assets/js/deconnexion.js"></script>
   </body>
 </html>

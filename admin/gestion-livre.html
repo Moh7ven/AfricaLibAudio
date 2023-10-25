@@ -55,7 +55,7 @@
 
         <div class="authen">
           <div class="identif">
-            <span>Administrateur</span>
+            <span id="infoUser">Administration</span>
           </div>
           <div class="logo-user">
             <img
@@ -67,7 +67,7 @@
             <div class="popover__content">
               <p class="popover__message"><a href="./profil.html">Profil</a></p>
               <hr />
-              <p class="popover__message deco">Deconnexion</p>
+              <p class="popover__message deco" id="deco">Deconnexion</p>
             </div>
           </div>
         </div>
@@ -89,11 +89,15 @@
                 <div class="head-modif">
                   <p>Ajouter un livre</p>
                 </div>
-                <form class="form-modif" enctype="multipart/form-data">
+                <form
+                  class="form-modif"
+                  id="formAdd"
+                  enctype="multipart/form-data"
+                >
                   <div class="element-modif">
                     <div class="titre-container style-element">
                       <label for="titre">Titre du livre</label>
-                      <input type="text" name="titre" id="titre" />
+                      <input type="text" name="titre" id="titreModif" />
                     </div>
                     <div class="descrip-container style-element">
                       <label for="libLivre">Description</label>
@@ -101,7 +105,11 @@
                     </div>
                     <div class="auteur-container style-element">
                       <label for="authorLivre">Auteur du livre</label>
-                      <input type="text" name="authorLivre" id="authorLivre" />
+                      <input
+                        type="text"
+                        name="authorLivre"
+                        id="author"
+                      />
                     </div>
                     <div class="type-container style-element">
                       <label for="typeLivre">Type de livre</label>
@@ -117,6 +125,11 @@
                     <div class="audio-container style-element">
                       <label for="audio">Audio du livre</label>
                       <input type="file" name="audio" id="audio" />
+                    </div>
+
+                    <div class="somme-container style-element">
+                      <label for="audio">Somme</label>
+                      <input type="text" name="sommeLivre" id="audio" />
                     </div>
                     <button class="btn-modif">Ajouter</button>
                   </div>
@@ -150,10 +163,10 @@
                     </div>
                     <div class="yesOrNo">
                       <div class="no" id="no">
-                        <a href="./gestion-livre.html">Non</a>
+                        <a href="./mes-livres.html">Non</a>
                       </div>
                       <div class="sup" id="supprimer">
-                        <a href="./mes-livres.html">Oui</a>
+                        <a href="">Oui</a>
                       </div>
                     </div>
                   </div>
@@ -218,7 +231,7 @@
     <!-- END POPUP MODIFIER LIVRE -->
 
     <section class="livres-container">
-      <div class="livre">
+      <!-- <div class="livre">
         <div class="supp-bloc"><a href="#popup-supprimer">Supprimer</a></div>
         <div class="modif-bloc"><a href="#popup-modifier">Modifier</a></div>
         <div class="image-livre">
@@ -246,7 +259,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <section role="footer">
@@ -341,5 +354,7 @@
         </div>
       </footer>
     </section>
+    <script src="./assets/js/gestion.js"></script>
+    <script src="../assets/js/deconnexion.js"></script>
   </body>
 </html>

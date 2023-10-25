@@ -6,6 +6,7 @@
     <title>Mes livres-AfricaLibAudio</title>
     <link rel="stylesheet" href="../assets/css/mes-livres.css" />
     <link rel="shortcut icon" href="../assets/img/logo.png" />
+    <link rel="stylesheet" href="../assets/css/popover.css" />
     <link rel="stylesheet" href="../assets/css/popup-supprimer.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
@@ -60,7 +61,7 @@
                             <a href="./mes-livres.html">Non</a>
                           </div>
                           <div class="sup" id="supprimer">
-                            <a href="./mes-livres.html">Oui</a>
+                            <a href="">Oui</a>
                           </div>
                         </div>
                       </div>
@@ -89,50 +90,46 @@
 
         <div class="authen">
           <div class="identif">
-            <span>Mohamed SANGARE</span>
+            <span id="infoUser"></span>
           </div>
           <div class="logo-user">
-            <a href="./profil.html"
-              ><img
-                src="../assets/img/humain.png"
-                alt=""
-                height="33px"
-                width="33px"
-            /></a>
+            <img
+              src="../assets/img/humain.png"
+              alt=""
+              height="33px"
+              width="33px"
+            />
+            <div class="popover__content">
+              <p class="popover__message"><a href="./profil.html">Profil</a></p>
+              <hr />
+              <p class="popover__message deco" id="deco">Deconnexion</p>
+            </div>
           </div>
         </div>
       </ul>
     </nav>
 
     <section class="livres-container">
-      <div class="livre">
+      <!-- <div class="livre">
         <div class="supp-bloc"><a href="#popup-supprimer">Supprimer</a></div>
         <div class="image-livre">
-          <img
-            src="../assets/img/histoire-general-afrique.png"
-            alt=""
-            height="300px"
-            width="200px"
-          />
+          <img src="" alt="" height="300px" width="200px" />
         </div>
         <div class="audio-and-des">
-          <audio controls><source src="../assets/BoyFifty-snake.mp3" /></audio>
+          <audio controls><source src="" /></audio>
           <div class="description">
             <p class="auteur">
-              <u>Auteur:</u> <span style="color: black">Mohamed sangare</span>
+              <u>Auteur:</u> <span style="color: black" id="auteur"></span>
             </p>
             <p class="titre">
               <u>Titre:</u>
-              <span style="color: black"> Afrique, mon afrique</span>
+              <span style="color: black" id="titre"></span>
             </p>
             <p class="des-title"><u>Descriptions</u></p>
-            <p class="des-text">
-              djfshfshfghjsdsdjhgdshjsghjdsfgsfgdshfdf fdfdsgf fdfgdshjfg
-              ddgfjfdvfjdfvjhfsdhsgfshfvdhfdff fdffjg fdgf ffgzdfhzg
-            </p>
+            <p class="des-text"></p>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <section role="footer">
@@ -227,5 +224,7 @@
         </div>
       </footer>
     </section>
+    <script src="../assets/js/mes-livres.js"></script>
+    <script src="../assets/js/deconnexion.js"></script>
   </body>
 </html>

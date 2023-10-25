@@ -80,8 +80,9 @@ async function recupDonnee() {
     });
   return recup;
 }
-
 recupDonnee();
+
+
 let idArt = "";
 async function makeAchat(idLivre) {
   await fetch(`https://africalibaudio-api.onrender.com/api/livre/${idLivre}`, {
@@ -113,22 +114,29 @@ acheter.addEventListener("click", (e) => {
     phone: phone,
     idArticle: idArt,
   };
-  console.log(objetPay);
+  //   console.log(objetPay);
 
-  /* async function sendAchat() {
+  async function sendAchat() {
     try {
-      const res = await fetch("http://localhost:3000/api/achat/createachat", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
+      const res = await fetch(
+        "https://africalibaudio-api.onrender.com/api/achat/createachat",
+        {
+          method: "POST",
+          body: JSON.stringify(objetPay),
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
+          window.location.href = "./acceuil.html";
         });
     } catch (error) {
       console.log(error);
     }
-  } */
+  }
+  return sendAchat();
 });
