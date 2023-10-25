@@ -6,6 +6,7 @@
     <title>Acceuil-AfricaLibAudio</title>
     <link rel="stylesheet" href="../assets/css/acceuil.css" />
     <link rel="stylesheet" href="../assets/css/popup-achat.css" />
+    <link rel="stylesheet" href="../assets/css/popover.css" />
     <link rel="shortcut icon" href="../assets/img/logo.png" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
@@ -48,16 +49,20 @@
 
         <div class="authen">
           <div class="identif">
-            <span>Mohamed SANGARE</span>
+            <span id="infoUser"></span>
           </div>
           <div class="logo-user">
-            <a href="./profil.html"
-              ><img
-                src="../assets/img/humain.png"
-                alt=""
-                height="33px"
-                width="33px"
-            /></a>
+            <img
+              src="../assets/img/humain.png"
+              alt=""
+              height="33px"
+              width="33px"
+            />
+            <div class="popover__content">
+              <p class="popover__message"><a href="./profil.html">Profil</a></p>
+              <hr />
+              <p class="popover__message deco" id="deco">Deconnexion</p>
+            </div>
           </div>
         </div>
       </ul>
@@ -74,20 +79,21 @@
                 <div class="achat-title">
                   <p>Achat de livre</p>
                 </div>
-                <form>
+                <form enctype="multipart/form-data">
                   <div class="image-livre">
                     <img
-                      src="../assets/img/histoire-general-afrique.png"
+                      src=""
                       alt=""
                       height="300px"
                       width="200px"
+                      id="image-pop"
                     />
                   </div>
                   <div class="info-achat">
                     <p class="paye-title">
                       Veuillez choisir le moyen de payement
                     </p>
-                    <select name="operateur" id="">
+                    <select name="operateur" id="payement">
                       <option value="mtn money" selected>mtn money</option>
                       <option value="moov money">moov money</option>
                       <option value="orange money">orange money</option>
@@ -99,21 +105,21 @@
                       placeholder="Veuillez entrer votre numéro de téléphone"
                       class="phone"
                     />
-                    <p class="prix-pop"><u>Prix:</u> <span>15000</span> fcfa</p>
-                    <button>Acheter</button>
+                    <p class="prix-pop">
+                      <u>Prix:</u> <span id="prix"></span> fcfa
+                    </p>
+                    <button id="acheter">Acheter</button>
                   </div>
                 </form>
                 <div class="des-pop-container">
-                  <p class="des-pop-title"><u>Titre:</u> <span>Africa</span></p>
                   <p class="des-pop-title">
-                    <u>Auteur:</u> <span>Mohamed Sangare</span>
+                    <u>Titre:</u> <span id="titre"></span>
+                  </p>
+                  <p class="des-pop-title">
+                    <u>Auteur:</u> <span id="auteur"></span>
                   </p>
                   <p class="des-pop-title"><u>Description</u></p>
-                  <p class="des-pop">
-                    ehedgjsvddddsvdsjhvf fnkjfb f fbfsbf fkbhshj fjhv
-                    ehedgjsvddddsvdsjhvf fnkjfb f fbfsbf fkbhshj
-                    fjhvehedgjsvddddsvdsjhvf fnkjfb f fbfsbf fkbhshj fjhv
-                  </p>
+                  <p class="des-pop"></p>
                 </div>
               </div>
             </section>
@@ -139,217 +145,7 @@
         </p>
       </div>
 
-      <div class="card-livre-container">
-        <div class="card-livre">
-          <div class="card-haut">
-            <img
-              src="../assets/img/histoire-general-afrique.png"
-              alt=""
-              width="139px"
-              height="207px"
-            />
-          </div>
-          <div class="card-bas">
-            <span class="titre">Histoire Générale De L'Afrique</span>
-            <span class="type-content"
-              ><u>Catégorie:</u> <span class="type">Enfants</span></span
-            >
-            <span class="prix">15000 <span>fcfa</span></span>
-            <div class="panier-logo">
-              <a href="#popup-achat">
-                <img
-                  src="../assets/img/panier.png"
-                  alt="logo-panier"
-                  width="23px"
-                  height="23px"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-livre">
-          <div class="card-haut">
-            <img
-              src="../assets/img/histoire-general-afrique.png"
-              alt=""
-              width="139px"
-              height="207px"
-            />
-          </div>
-          <div class="card-bas">
-            <span class="titre">Histoire Générale De L'Afrique</span>
-            <span class="type-content"
-              ><u>Catégorie:</u> <span class="type">Enfants</span></span
-            >
-            <span class="prix">15000 <span>fcfa</span></span>
-            <div class="panier-logo">
-              <img
-                src="../assets/img/panier.png"
-                alt="logo-panier"
-                width="23px"
-                height="23px"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="card-livre">
-          <div class="card-haut">
-            <img
-              src="../assets/img/histoire-general-afrique.png"
-              alt=""
-              width="139px"
-              height="207px"
-            />
-          </div>
-          <div class="card-bas">
-            <span class="titre">Histoire Générale De L'Afrique</span>
-            <span class="type-content"
-              ><u>Catégorie:</u> <span class="type">Enfants</span></span
-            >
-            <span class="prix">15000 <span>fcfa</span></span>
-            <div class="panier-logo">
-              <img
-                src="../assets/img/panier.png"
-                alt="logo-panier"
-                width="23px"
-                height="23px"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="card-livre">
-          <div class="card-haut">
-            <img
-              src="../assets/img/histoire-general-afrique.png"
-              alt=""
-              width="139px"
-              height="207px"
-            />
-          </div>
-          <div class="card-bas">
-            <span class="titre">Histoire Générale De L'Afrique</span>
-            <span class="type-content"
-              ><u>Catégorie:</u> <span class="type">Enfants</span></span
-            >
-            <span class="prix">15000 <span>fcfa</span></span>
-            <div class="panier-logo">
-              <img
-                src="../assets/img/panier.png"
-                alt="logo-panier"
-                width="23px"
-                height="23px"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="card-livre">
-          <div class="card-haut">
-            <img
-              src="../assets/img/histoire-general-afrique.png"
-              alt=""
-              width="139px"
-              height="207px"
-            />
-          </div>
-          <div class="card-bas">
-            <span class="titre">Histoire Générale De L'Afrique</span>
-            <span class="type-content"
-              ><u>Catégorie:</u> <span class="type">Enfants</span></span
-            >
-            <span class="prix">15000 <span>fcfa</span></span>
-            <div class="panier-logo">
-              <img
-                src="../assets/img/panier.png"
-                alt="logo-panier"
-                width="23px"
-                height="23px"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="card-livre">
-          <div class="card-haut">
-            <img
-              src="../assets/img/histoire-general-afrique.png"
-              alt=""
-              width="139px"
-              height="207px"
-            />
-          </div>
-          <div class="card-bas">
-            <span class="titre">Histoire Générale De L'Afrique</span>
-            <span class="type-content"
-              ><u>Catégorie:</u> <span class="type">Enfants</span></span
-            >
-            <span class="prix">15000 <span>fcfa</span></span>
-            <div class="panier-logo">
-              <img
-                src="../assets/img/panier.png"
-                alt="logo-panier"
-                width="23px"
-                height="23px"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="card-livre">
-          <div class="card-haut">
-            <img
-              src="../assets/img/histoire-general-afrique.png"
-              alt=""
-              width="139px"
-              height="207px"
-            />
-          </div>
-          <div class="card-bas">
-            <span class="titre">Histoire Générale De L'Afrique</span>
-            <span class="type-content"
-              ><u>Catégorie:</u> <span class="type">Enfants</span></span
-            >
-            <span class="prix">15000 <span>fcfa</span></span>
-            <div class="panier-logo">
-              <img
-                src="../assets/img/panier.png"
-                alt="logo-panier"
-                width="23px"
-                height="23px"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="card-livre">
-          <div class="card-haut">
-            <img
-              src="../assets/img/histoire-general-afrique.png"
-              alt=""
-              width="139px"
-              height="207px"
-            />
-          </div>
-          <div class="card-bas">
-            <span class="titre">Histoire Générale De L'Afrique</span>
-            <span class="type-content"
-              ><u>Catégorie:</u> <span class="type">Enfants</span></span
-            >
-            <span class="prix">15000 <span>fcfa</span></span>
-            <div class="panier-logo">
-              <img
-                src="../assets/img/panier.png"
-                alt="logo-panier"
-                width="23px"
-                height="23px"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="card-livre-container"></div>
     </section>
 
     <section role="footer">
@@ -444,5 +240,7 @@
         </div>
       </footer>
     </section>
+    <script src="../assets/js/acceuil.js"></script>
+    <script src="../assets/js/deconnexion.js"></script>
   </body>
 </html>

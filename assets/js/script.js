@@ -1,3 +1,47 @@
+async function recupDonnee() {
+  const recup = await fetch(
+    "https://africalibaudio-api.onrender.com/api/livre/"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      let html = "";
+      data.forEach((element) => {
+        html += `
+        <div class="card-livre">
+        <div class="card-haut">
+          <img
+            src="${element.image}"
+            alt=""
+            width="139px"
+            height="207px"
+          />
+        </div>
+        <div class="card-bas">
+          <span class="titre">${element.titre}</span>
+          <span class="type-content"
+            ><u>Catégorie:</u> <span class="type">${element.typeLivre}</span></span
+          >
+          <span class="prix">${element.sommeLivre} <span>fcfa</span></span>
+          <div class="panier-logo">
+            <img
+              src="./assets/img/panier.png"
+              alt="logo-panier"
+              width="23px"
+              height="23px"
+            />
+          </div>
+        </div>
+      </div>
+            `;
+      });
+      document.querySelector(".card-livre-container").innerHTML = html;
+      // console.log(data);
+    });
+  return recup;
+}
+
+recupDonnee();
+
 const menuSlide = () => {
   const menuIcon = document.querySelector(".menu-icon");
   const navLinks = document.querySelector(".nav-links");
@@ -25,25 +69,3 @@ const menuSlide = () => {
 };
 
 menuSlide();
-
-/* async function recupDonnee() {
-  const recup = await fetch("http://localhost:3000/depart")
-    .then((response) => response.json())
-    .then((data) => {
-      let html = "";
-      data.forEach((element) => {
-        html += `
-            <div id="${element.id}">
-                <h3>${element.nom}</h3>
-                <p>le prix${element.prix}</p>
-                <p>le nombre de commantaire ${element.nbrComment}</p>
-            </div>
-            `;
-      });
-      document.querySelector("#donnee").innerHTML = html;
-      console.log(data);
-    });
-  return recup;
-}
-
-recupDonnee(); */
