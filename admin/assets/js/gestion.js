@@ -1,8 +1,11 @@
+// document.addEventListener("DOMContentLoaded", function () {
 const token = localStorage.getItem("token");
 const supLivre = document.querySelector("#supprimer");
 // const modifLivre = documen.querySelector("#");
 
 const formAdd = document.querySelector("#formAdd");
+const msgLivVide = document.querySelector("#msgLivVide");
+const messageAdd = document.querySelector("#messageAdd");
 
 /* VERIFIER SI L'UTILISATEUR EST CONNECTER */
 if (!token) {
@@ -27,7 +30,10 @@ async function addLivre() {
     );
 
     if (res.ok) {
-      window.location.href = "./gestion-livre.html";
+      messageAdd.style.color = "white";
+      messageAdd.textContent =
+        "Livre enregistrer avec succès veuillez patienter svp !";
+      setInterval((window.location.href = "./gestion-livre.html"), 3000);
     } else {
       const resData = await res.json();
       console.log("Erreur lors de l'enregistrement du livre: ", resData);
@@ -56,6 +62,7 @@ async function recupLivres() {
     .then((response) => response.json())
     .then((data) => {
       //   console.log(data);
+
       let html = "";
       let modifForm = "";
       data.forEach((element) => {
@@ -90,8 +97,14 @@ async function recupLivres() {
         </div>
                `;
       });
+      /* if ((data = [])) {
+        msgLivVide.style.color = "red";
+        msgLivVide.textContent =
+          "Aucun livre n'est enregistré pour le moment !";
+      } */
       document.querySelector(".livres-container").innerHTML = html;
       document.querySelector("#author").textContent = "bonjour";
+
       console.log(data);
     });
   return recup;
@@ -238,3 +251,5 @@ document.querySelector(".form-modif").addEventListener("submit", async (e) => {
   }
 });
  */
+
+// });
