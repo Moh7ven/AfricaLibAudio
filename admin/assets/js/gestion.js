@@ -177,11 +177,11 @@ function setUpdateIndex(index) {
 
   async function modifRegister() {
     const formDataModif = new FormData(formModif);
-    const livreIdfForModif = currentUpdateIndex;
+    // const livreIdfForModif = currentUpdateIndex;
 
     try {
       const res = await fetch(
-        `https://africalibaudio-api.onrender.com/api/livre/${livreIdfForModif}`,
+        `https://africalibaudio-api.onrender.com/api/livre/${currentUpdateIndex}`,
         {
           method: "PUT",
           body: formDataModif,
