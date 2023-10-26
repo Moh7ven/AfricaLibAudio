@@ -84,6 +84,13 @@ select {
   margin-top: 2%;
 }
 
+.style-element p {
+  font-size: 13px;
+  width: 300px;
+  margin-top: 3%;
+  text-align: center;
+}
+
 .btn-modif {
   height: 40px;
   width: 80px;

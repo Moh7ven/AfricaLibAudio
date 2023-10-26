@@ -131,42 +131,110 @@ let currentUpdateIndex;
 
 function setUpdateIndex(index) {
   currentUpdateIndex = index;
-  if (currentUpdateIndex !== undefined) {
-    async function UpdateData() {
-      const UpData = await fetch(
-        `https://africalibaudio-api.onrender.com/api/livre/${currentUpdateIndex}`,
-        {
-          method: "GET",
-        }
-      )
-        .then((res) => res.json())
-        .then((data) => {
-            document.querySelector("#author").value = data.titre;
-        })
-        .catch((e) => console.log(e));
-    }
-    UpdateData();
-    //   console.log(currentDeleteIndex);
-  }
-}
+  console.log(currentUpdateIndex);
 
-/* modifLivre.addEventListener("click", (e) => {
+  // Fonction pour récupérer et afficher les données du livre existant
+  async function getLivreData() {
+    try {
+      const response = await fetch(
+        `https://africalibaudio-api.onrender.com/api/livre/${currentUpdateIndex}`
+      );
+      if (response.ok) {
+        const data = await response.json();
+        // console.log(data);
+        // console.log(data.libLivre);
+
+        document.getElementById("titre").value = data.titre;
+        document.querySelector("#lib").value = data.libLivre;
+        document.getElementById("authorLivre").value = data.authorLivre;
+        document.getElementById("typeLivre").value = data.typeLivre;
+        document.getElementById("sommeLivre").value = data.sommeLivre;
+
+        //afficher le nom de l'image du livre
+        const imageUrl = data.image;
+        const imageName = imageUrl.split("/").pop().replace(/^\d+-/, "");
+        document.getElementById("imageName").textContent = imageName;
+
+        //afficher le nom de l'audio du livre
+        const audioUrl = data.audio;
+        const audioName = audioUrl.split("/").pop().replace(/^\d+-/, "");
+        document.getElementById("audioName").textContent = audioName;
+      } else {
+        console.error("Erreur lors de la récupération des données du livre");
+      }
+    } catch (error) {
+      console.error(
+        "Erreur lors de la récupération des données du livre",
+        error
+      );
+    }
+  }
+
+  getLivreData();
+
+  const formModif = document.querySelector(".form-modif");
+  console.log(formModif);
+
+  async function modifRegister() {
+    const formDataModif = new FormData(formModif);
+    const livreIdfForModif = currentUpdateIndex;
+
+    try {
+      const res = await fetch(
+        `https://africalibaudio-api.onrender.com/api/livre/${livreIdfForModif}`,
+        {
+          method: "PUT",
+          body: formDataModif,
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      if (res.ok) {
+        console.log("hello");
+      } else {
+        const resData = await res.json();
+        console.log("Erreur lors de la modification du livre", resData);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  formModif.addEventListener("submit", (e) => {
+    e.preventDefault();
+    modifRegister();
+  });
+}
+/* // Ici on ecoute le formulaire de modification
+document.querySelector(".form-modif").addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  if (currentUpdateIndex !== undefined) {
-    async function UpdateData() {
-      const UpData = await fetch(
-        `https://africalibaudio-api.onrender.com/api/livre/${ccurrentUpdateIndex}`,
-        {
-          method: "GET",
-        }
-      )
-        .then((res) => res.json())
-        .then((data)=>{
-            document.querySelector("")
-        })
-        .catch((e) => console.log(e));
+  const livreId = currentUpdateIndex;
+  const formData = new FormData(document.querySelector(".form-modif"));
+  console.log("hello");
+
+  try {
+    const response = await fetch(
+      `https://africalibaudio-api.onrender.com/api/livre/${livreId}`,
+      {
+        method: "PUT",
+        body: formData,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    if (response.ok) {
+      //   window.location.href = "./gestion-livre.html";
+    //   console.log("hello");
+    } else {
+      console.error("Erreur lors de la mise à jour du livre");
     }
-    UpdateData();
+  } catch (error) {
+    console.error("Erreur lors de la mise à jour du livre", error);
   }
-}); */
+});
+ */

@@ -105,11 +105,7 @@
                     </div>
                     <div class="auteur-container style-element">
                       <label for="authorLivre">Auteur du livre</label>
-                      <input
-                        type="text"
-                        name="authorLivre"
-                        id="author"
-                      />
+                      <input type="text" name="authorLivre" id="author" />
                     </div>
                     <div class="type-container style-element">
                       <label for="typeLivre">Type de livre</label>
@@ -190,7 +186,11 @@
                 <div class="head-modif">
                   <p>Modifier un livre</p>
                 </div>
-                <form class="form-modif" enctype="multipart/form-data">
+                <form
+                  class="form-modif"
+                  onsubmit="return false;"
+                  enctype="multipart/form-data"
+                >
                   <div class="element-modif">
                     <div class="titre-container style-element">
                       <label for="titre">Titre du livre</label>
@@ -198,7 +198,7 @@
                     </div>
                     <div class="descrip-container style-element">
                       <label for="libLivre">Description</label>
-                      <input type="text" name="libLivre" id="libLivre" />
+                      <input type="text" name="libLivre" id="lib" />
                     </div>
                     <div class="auteur-container style-element">
                       <label for="authorLivre">Auteur du livre</label>
@@ -214,12 +214,20 @@
                     <div class="image-container style-element">
                       <label for="image">Image du livre</label>
                       <input type="file" name="image" id="image" />
+                      <p id="imageName"></p>
                     </div>
                     <div class="audio-container style-element">
                       <label for="audio">Audio du livre</label>
                       <input type="file" name="audio" id="audio" />
+                      <p id="audioName"></p>
+                    </div>
+
+                    <div class="somme-container style-element">
+                      <label for="audio">somme</label>
+                      <input type="text" name="audio" id="sommeLivre" />
                     </div>
                     <button class="btn-modif">Modifier</button>
+                    <p id="message"></p>
                   </div>
                 </form>
               </div>
