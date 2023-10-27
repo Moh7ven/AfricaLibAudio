@@ -118,6 +118,39 @@ body {
   color: white;
 }
 
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 7%;
+}
+
+.btn-container .btn {
+  height: 50px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(81, 176, 7, 1);
+  border-radius: 5px;
+}
+
+.btn-container .btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn-container p {
+  /* margin-left: 5%; */
+  font-size: 18px;
+}
+
+.btn-container p span {
+  color: rgba(81, 176, 7, 1);
+  text-decoration: underline;
+}
+
 /* LIVRES CONTAINER */
 
 .livres-container {

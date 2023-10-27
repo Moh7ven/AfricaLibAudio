@@ -77,6 +77,7 @@ async function recupDonnee() {
              `;
       });
       document.querySelector(".livres-container").innerHTML = html;
+      document.querySelector("#nbrLivre").textContent = data.length;
       console.log(data);
     });
   return recup;
