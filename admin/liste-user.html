@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/liste-user.css" />
     <link rel="shortcut icon" href="../assets/img/logo.png" />
+    <link rel="stylesheet" href="../assets/css/popup-supprimer.css" />
     <link rel="stylesheet" href="./assets/css/popover.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
@@ -62,14 +63,146 @@
               width="33px"
             />
             <div class="popover__content">
-              <p class="popover__message"><a href="./profil.html">Profil</a></p>
-              <hr />
+              <!-- <p class="popover__message"><a href="./profil.html">Profil</a></p>
+              <hr /> -->
               <p class="popover__message deco" id="deco">Deconnexion</p>
             </div>
           </div>
         </div>
       </ul>
     </nav>
+
+    <!-- POPUP ALERT SUPPRIMER LIVRE-->
+    <div id="popup-supprimer" class="overlay">
+      <div class="overlay-content">
+        <a class="close" href="#">&times;</a>
+        <div class="popup">
+          <div class="content-popup">
+            <section class="principal">
+              <div class="container-pop">
+                <form action="./acceuil.html">
+                  <div class="titre-form-supprimer">
+                    <img src="../assets/img/alerte.png" alt="logo-alert" />
+                  </div>
+                  <div class="element">
+                    <div class="style-msg-alert">
+                      <span class="desc"
+                        >ATTENTION!! Voulez-vous vraimment supprimer ce
+                        utilisateur ?</span
+                      >
+                    </div>
+                    <div class="yesOrNo">
+                      <div class="no" id="no">
+                        <a href="./liste-user.html">Non</a>
+                      </div>
+                      <div class="sup" id="supprimer">
+                        <a href="">Oui</a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END POPUP ALERT SUPPRIMER LIVRE -->
+
+    <section class="livres-container"></section>
+
+    <section role="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="site-descrip">
+            <img
+              src="../assets/img/logo.png"
+              alt=""
+              width="113px"
+              height="68px"
+            />
+            <p>
+              AfricaLibAudio, votre passerelle vers un monde de découverte,
+              d'aventure et d'apprentissage à travers les livres audio pour tout
+              age et pour enfants centrés sur l'Afrique.
+            </p>
+          </div>
+          <div class="bloc-info">
+            <div class="bloc-info1">
+              <div class="rond1">
+                <img
+                  src="../assets/img/courrier.png"
+                  alt=""
+                  height="30px"
+                  width="30px"
+                />
+              </div>
+              <div class="info-text1">
+                <p>Email:</p>
+                <p>Mohamedsangare0107@gmail.com</p>
+              </div>
+            </div>
+            <div class="bloc-info2">
+              <div class="rond2">
+                <img
+                  src="../assets/img/localisateur.png"
+                  alt=""
+                  height="30px"
+                  width="30px"
+                />
+              </div>
+              <div class="info-text2">
+                <p>Adresse:</p>
+                <p>Abidjan, Côte dIvoire</p>
+              </div>
+            </div>
+          </div>
+          <div class="our-social">
+            <p class="social-title">NOS RESEAUX</p>
+            <div class="social-content">
+              <div class="github">
+                <img
+                  src="../assets/img/github.png"
+                  alt=""
+                  height="30px"
+                  width="30px"
+                />
+              </div>
+              <div class="twitter">
+                <img
+                  src="../assets/img/twitter.png"
+                  alt=""
+                  height="30px"
+                  width="30px"
+                />
+              </div>
+              <div class="insta">
+                <img
+                  src="../assets/img/instagram.png"
+                  alt=""
+                  height="30px"
+                  width="30px"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="liens">
+            <p>Liens</p>
+            <div class="liens-container">
+              <a href="">Nos produits</a>
+              <a href="">A propros</a>
+              <a href="">Nous contacter</a>
+            </div>
+          </div>
+        </div>
+        <div class="bloc-copy">
+          <div class="trait-foot"></div>
+          <div class="copyright">
+            <p>Tous droits réservés © 2023 Mohamed SANGARE</p>
+          </div>
+        </div>
+      </footer>
+    </section>
     <script src="./assets/js/liste-user.js"></script>
     <script src="../assets/js/deconnexion.js"></script>
   </body>
