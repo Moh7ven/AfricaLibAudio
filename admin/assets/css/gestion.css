@@ -142,6 +142,15 @@ body {
   color: white;
 }
 
+.btn-container p {
+  margin-left: 5%;
+}
+
+.btn-container p span {
+  color: rgba(81, 176, 7, 1);
+  text-decoration: underline;
+}
+
 /* LIVRES CONTAINER */
 
 .livres-container {

@@ -61,8 +61,6 @@ async function recupLivres() {
   )
     .then((response) => response.json())
     .then((data) => {
-      //   console.log(data);
-
       let html = "";
       let modifForm = "";
       data.forEach((element) => {
@@ -104,6 +102,7 @@ async function recupLivres() {
       } */
       document.querySelector(".livres-container").innerHTML = html;
       document.querySelector("#author").textContent = "bonjour";
+      document.querySelector("#nbrLivre").textContent = data.length;
 
       console.log(data);
     });

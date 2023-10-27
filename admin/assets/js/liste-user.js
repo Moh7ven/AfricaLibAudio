@@ -57,6 +57,7 @@ async function recupLivres() {
                  `;
       });
       document.querySelector(".livres-container").innerHTML = html;
+      document.querySelector("#nbrLivre").textContent = data.length;
 
       console.log(data);
     });
